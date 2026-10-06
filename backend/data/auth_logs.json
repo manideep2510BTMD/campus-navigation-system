@@ -1,0 +1,62 @@
+[
+  {
+    "timestamp": "2026-10-03T07:27:06.913Z",
+    "email": "yadamanideep4@gmail.com",
+    "action": "REGISTER"
+  },
+  {
+    "timestamp": "2026-10-03T07:32:42.332Z",
+    "email": "yadamanideep4@gmail.com",
+    "action": "LOGOUT"
+  },
+  {
+    "timestamp": "2026-10-03T07:32:51.954Z",
+    "email": "yadamanideep4@gmail.com",
+    "action": "LOGIN"
+  },
+  {
+    "timestamp": "2026-10-03T07:32:53.992Z",
+    "email": "yadamanideep4@gmail.com",
+    "action": "LOGOUT"
+  },
+  {
+    "timestamp": "2026-10-03T08:12:03.476Z",
+    "email": "yadamanideep4@gmail.com",
+    "action": "LOGIN"
+  },
+  {
+    "timestamp": "2026-10-03T08:14:56.946Z",
+    "email": "yadamanideep4@gmail.com",
+    "action": "LOGOUT"
+  },
+  {
+    "timestamp": "2026-10-03T08:22:41.053Z",
+    "email": "yadamanideep4@gmail.com",
+    "action": "LOGIN"
+  },
+  {
+    "timestamp": "2026-10-03T08:22:53.662Z",
+    "email": "yadamanideep4@gmail.com",
+    "action": "LOGOUT"
+  },
+  {
+    "timestamp": "2026-10-03T08:50:25.361Z",
+    "email": "srivardhankatta7@gmail.com",
+    "action": "REGISTER"
+  },
+  {
+    "timestamp": "2026-10-03T08:50:30.433Z",
+    "email": "srivardhankatta7@gmail.com",
+    "action": "LOGOUT"
+  },
+  {
+    "timestamp": "2026-10-03T08:53:36.351Z",
+    "email": "yadamanideep4@gmail.com",
+    "action": "LOGIN"
+  },
+  {
+    "timestamp": "2026-10-03T08:55:37.427Z",
+    "email": "yadamanideep4@gmail.com",
+    "action": "LOGOUT"
+  }
+]

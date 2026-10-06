@@ -1,0 +1,200 @@
+/* ═══════════════════════════════════════════
+   CampusNav – Global Styles
+   Font: Plus Jakarta Sans (Google Fonts)
+   Theme: Blue + Orange, no purple
+   Mobile-first design (max-width 430px)
+═══════════════════════════════════════════ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary:       #0052CC;
+  --primary-light: #2684FF;
+  --primary-dark:  #003a99;
+  --accent:        #FF6B35;
+  --accent-light:  #FF8C5A;
+  --success:       #36B37E;
+  --warning:       #FFAB00;
+  --error:         #FF5630;
+  --info:          #0065FF;
+
+  --bg:            #F4F5F7;
+  --card:          #FFFFFF;
+  --text:          #172B4D;
+  --text-muted:    #5E6C84;
+  --border:        #DFE1E6;
+
+  --shadow:        0 2px 12px rgba(0, 52, 153, 0.08);
+  --shadow-lg:     0 8px 32px rgba(0, 52, 153, 0.14);
+  --radius:        14px;
+  --radius-sm:     8px;
+  --radius-xs:     6px;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background: #CBD5E8;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+  max-width: 430px;
+  margin: 0 auto;
+  background: var(--card);
+  box-shadow: 0 0 60px rgba(0, 52, 153, 0.18);
+  overflow: hidden;
+}
+
+/* ── Scrollbar ─────────────────────────── */
+::-webkit-scrollbar         { width: 4px; }
+::-webkit-scrollbar-track   { background: transparent; }
+::-webkit-scrollbar-thumb   { background: var(--border); border-radius: 4px; }
+
+/* ── Buttons ───────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  text-decoration: none;
+  width: 100%;
+  letter-spacing: 0.2px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 4px 14px rgba(0, 82, 204, 0.35);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 82, 204, 0.45);
+}
+.btn-primary:active { transform: translateY(0); }
+.btn-primary:disabled {
+  background: var(--border);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 4px 14px rgba(255, 107, 53, 0.35);
+}
+.btn-accent:hover:not(:disabled) {
+  background: var(--accent-light);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+.btn-outline:hover { background: var(--primary); color: white; }
+
+/* ── Form Elements ─────────────────────── */
+input, select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  color: var(--text);
+  background: var(--card);
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  -webkit-appearance: none;
+}
+input:focus, select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.12);
+}
+input.error, select.error {
+  border-color: var(--error);
+  box-shadow: 0 0 0 3px rgba(255, 86, 48, 0.12);
+}
+input::placeholder { color: var(--text-muted); opacity: 0.7; }
+select option       { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+.error-msg {
+  color: var(--error);
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ── Cards ─────────────────────────────── */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* ── Badges ────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge-blue   { background: #DEEBFF; color: var(--primary); }
+.badge-green  { background: #E3FCEF; color: var(--success); }
+.badge-orange { background: #FFF0E6; color: var(--accent); }
+.badge-gray   { background: var(--bg); color: var(--text-muted); }
+
+/* ── Spinner ───────────────────────────── */
+@keyframes spin { to { transform: rotate(360deg); } }
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(0, 82, 204, 0.2);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+/* ── Fade in animation ─────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.3s ease forwards; }
+
+/* ── Desktop centering ─────────────────── */
+@media (min-width: 450px) {
+  body { padding: 24px 0; }
+  #root {
+    border-radius: 24px;
+    min-height: calc(100vh - 48px);
+    overflow: hidden;
+  }
+}
